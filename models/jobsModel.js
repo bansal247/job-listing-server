@@ -1,0 +1,60 @@
+const mongoose = require('mongoose')
+
+const jobSchema = new mongoose.Schema({
+    _id:{
+        type:mongoose.Schema.ObjectId,
+        auto:true,
+    },
+    companyName:{
+        type:String,
+        required:true
+    },
+    remote:{
+        type:String,
+        required:true,
+        enum:['remote','office','hybrid']
+    },
+    skills:{
+        type:String,
+        required:true
+    },
+    recruiterName:{
+        type:String,
+        required:true
+    },
+    createdAt:{
+        type:String,
+        default:Date.now
+    },
+    logoURL:{
+        type:String,
+        required:true
+    },
+    postion:{
+        type:String,
+        required:true
+    },
+    salary:{
+        type:String,
+        required:true
+    },
+    jobType:{
+        type:String,
+        required:true,
+        enum:['full-time','part-time']
+    },
+    location:{
+        type:String,
+        required:true
+    },
+    description:{
+        type:String,
+        required:true
+    },
+    userId:{
+        type:String,
+        required:true
+    }
+})
+
+module.exports = mongoose.model("Job",jobSchema)
