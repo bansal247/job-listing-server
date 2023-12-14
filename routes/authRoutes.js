@@ -3,9 +3,8 @@ const userRouter = express.Router();
 const User = require('../models/userModel')
 const bcrypt = require('bcrypt')
 const jwt = require('jsonwebtoken')
-require('dotenv').config()
 
-const {errorHandler} = require('../utils/utils')
+const errorHandler = require('../middleware/error')
 
 userRouter.post('/register',async (req,res)=>{
     try{

@@ -51,6 +51,14 @@ const jobSchema = new mongoose.Schema({
         type:String,
         required:true
     },
+    aboutCompany:{
+        type:String,
+        required:true
+    },
+    information:{
+        type:String,
+        required:true
+    },
     userId:{
         type:String,
         required:true

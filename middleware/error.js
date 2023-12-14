@@ -5,4 +5,4 @@ const errorHandler = (res, error) => {
     })
 }
 
-module.exports = {errorHandler}
+module.exports = errorHandler
